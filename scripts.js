@@ -10,12 +10,30 @@ const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 const options = document.querySelectorAll(".option");
+const playerDisplay = document.querySelector("#player-display");
+const pcDisplay = document.querySelector("#pc-display");
+let playerChoice;
+let pcChoice;
 
 // APPLY EVENT LISTENER TO OPTIONS
-options.forEach(addEventListener("click", playerChoice()));
+options.forEach((option) => {
+	option.addEventListener("click", () => {
+		console.log(option.id);
+	});
+});
 
-// PLAYER CHOICE FUNC
-const playerChoice = () => {};
+function computerDecision() {
+	const optionNumber = Math.floor(Math.random() * options.length);
 
-// PC CHOICE FUNC
-// const compChoice = () => {};
+	if (optionNumber === 1) {
+		computerChoice = "ROCK";
+	} else if (optionNumber === 2) {
+		computerChoice = "PAPER";
+	} else {
+		computerChoice = "SCISSORS";
+	}
+
+	computerDisplay.innerHTML = computerChoice;
+
+	decideWinner();
+}

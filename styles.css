@@ -33,11 +33,31 @@ h2 {
 	height: fit-content;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
+}
+
+.options {
+	width: 100%;
+	display: flex;
 	justify-content: space-evenly;
 }
 
 .option {
+	cursor: pointer;
 	height: 15rem;
 	width: 25%;
 	border: 1px solid #ff0000;
+}
+
+.displays {
+	width: 100%;
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.display {
+	height: 5rem;
+	width: 20%;
+	border: 1px solid cyan;
 }
