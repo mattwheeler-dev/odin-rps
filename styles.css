@@ -57,7 +57,28 @@ h2 {
 }
 
 .display {
-	height: 5rem;
+	height: 10rem;
 	width: 20%;
+	text-align: center;
+}
+
+#player-display,
+#pc-display {
+	height: 7.5rem;
+	width: 100%;
+	margin-top: 1rem;
 	border: 1px solid cyan;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	height: 3rem;
+	width: 7rem;
+	margin: 2rem auto;
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+	border-radius: 10px;
 }

@@ -15,25 +15,37 @@ const pcDisplay = document.querySelector("#pc-display");
 let playerChoice;
 let pcChoice;
 
-// APPLY EVENT LISTENER TO OPTIONS
-options.forEach((option) => {
-	option.addEventListener("click", () => {
-		console.log(option.id);
-	});
-});
-
-function computerDecision() {
+// CREATE AND DISPLAY COMPUTER DECISION
+const computerDecision = () => {
 	const optionNumber = Math.floor(Math.random() * options.length);
 
 	if (optionNumber === 1) {
-		computerChoice = "ROCK";
+		pcChoice = "rock";
 	} else if (optionNumber === 2) {
-		computerChoice = "PAPER";
+		pcChoice = "paper";
 	} else {
-		computerChoice = "SCISSORS";
+		pcChoice = "scissors";
 	}
 
-	computerDisplay.innerHTML = computerChoice;
+	pcDisplay.innerHTML = pcChoice;
 
-	decideWinner();
-}
+	// decideWinner();
+};
+
+// APPLY EVENT LISTENER TO OPTIONS AND START GAME
+options.forEach((option) => {
+	option.addEventListener("click", (e) => {
+		// COLLECT AND DISPLAY PLAYER CHOICE
+		playerChoice = e.target.id;
+		if (playerChoice === "rock") {
+			playerDisplay.innerHTML = "rock";
+		} else if (playerChoice === "paper") {
+			playerDisplay.innerHTML = "paper";
+		} else if (playerChoice === "scissors") {
+			playerDisplay.innerHTML = "scissors";
+		}
+
+		// CALL PC DECISION
+		computerDecision();
+	});
+});
