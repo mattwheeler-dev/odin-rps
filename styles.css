@@ -1,0 +1,23 @@
+/* GOOGLE FONTS IMPORT [RALEWAY] */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
+
+/* DEFAULTS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+body {
+	height: auto;
+	width: 100vw;
+	color: #fff;
+	background-color: #101010;
+	overflow-x: hidden;
+}
+
+h1 {
+	text-align: center;
+	margin: 2rem;
+}
