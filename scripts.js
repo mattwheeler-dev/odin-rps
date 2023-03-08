@@ -13,15 +13,15 @@ const decideWinner = () => {
 	if (playerChoice == pcChoice) {
 		result.textContent = "Result: Tie!";
 	} else if (
-		(playerChoice == "rock") & (pcChoice == "scissors") ||
-		(playerChoice == "paper") & (pcChoice == "rock") ||
-		(playerChoice == "scissors") & (pcChoice == "paper")
+		(playerChoice == "rock") & (pcChoice == "Scissors") ||
+		(playerChoice == "paper") & (pcChoice == "Rock") ||
+		(playerChoice == "scissors") & (pcChoice == "Paper")
 	) {
 		result.textContent = "Result: YOU WIN!";
 	} else if (
-		(pcChoice == "rock") & (playerChoice == "scissors") ||
-		(pcChoice == "paper") & (playerChoice == "rock") ||
-		(pcChoice == "scissors") & (playerChoice == "paper")
+		(pcChoice == "Rock") & (playerChoice == "scissors") ||
+		(pcChoice == "Paper") & (playerChoice == "rock") ||
+		(pcChoice == "Scissors") & (playerChoice == "paper")
 	) {
 		result.textContent = "Result: You lose...";
 	}
@@ -32,11 +32,11 @@ const computerDecision = () => {
 	const optionNumber = Math.floor(Math.random() * options.length);
 
 	if (optionNumber === 1) {
-		pcChoice = "rock";
+		pcChoice = "Rock";
 	} else if (optionNumber === 2) {
-		pcChoice = "paper";
+		pcChoice = "Paper";
 	} else {
-		pcChoice = "scissors";
+		pcChoice = "Scissors";
 	}
 
 	pcDisplay.textContent = pcChoice;
@@ -49,13 +49,12 @@ options.forEach((option) => {
 	option.addEventListener("click", (e) => {
 		// COLLECT AND DISPLAY PLAYER CHOICE
 		playerChoice = e.target.id;
-
 		if (playerChoice === "rock") {
-			playerDisplay.textContent = "rock";
+			playerDisplay.textContent = "Rock";
 		} else if (playerChoice === "paper") {
-			playerDisplay.textContent = "paper";
+			playerDisplay.textContent = "Paper";
 		} else if (playerChoice === "scissors") {
-			playerDisplay.textContent = "scissors";
+			playerDisplay.textContent = "Scissors";
 		}
 
 		// CALL PC DECISION
