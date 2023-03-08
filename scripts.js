@@ -10,7 +10,7 @@ let pcChoice;
 
 // DECIDE WINNER AND DISPLAY RESULT
 const decideWinner = () => {
-	if (playerChoice == pcChoice) {
+	if (playerChoice.toLowerCase() == pcChoice.toLowerCase()) {
 		result.textContent = "Result: Tie!";
 	} else if (
 		(playerChoice == "rock") & (pcChoice == "Scissors") ||
