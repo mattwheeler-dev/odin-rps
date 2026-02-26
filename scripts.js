@@ -8,7 +8,7 @@ const pcDisplay = document.querySelector('#pc-display');
 let playerChoice;
 let pcChoice;
 
-// DECIDE WINNER AND DISPLAY RESULT
+// Decide winner and display result
 const decideWinner = () => {
 	if (playerChoice.toLowerCase() == pcChoice.toLowerCase()) {
 		result.textContent = 'Result: Tie!';
@@ -27,7 +27,7 @@ const decideWinner = () => {
 	}
 };
 
-// CREATE AND DISPLAY COMPUTER DECISION
+// Create computer decision and display it
 const computerDecision = () => {
 	const optionNumber = Math.floor(Math.random() * options.length);
 
@@ -44,10 +44,10 @@ const computerDecision = () => {
 	decideWinner();
 };
 
-// APPLY EVENT LISTENER TO OPTIONS AND START GAME
+// Apply event listeners to and init game
 options.forEach((option) => {
 	option.addEventListener('click', (e) => {
-		// COLLECT AND DISPLAY PLAYER CHOICE
+		// Collect and display player choice
 		playerChoice = e.target.id;
 		if (playerChoice === 'rock') {
 			playerDisplay.textContent = 'Rock';
@@ -57,7 +57,7 @@ options.forEach((option) => {
 			playerDisplay.textContent = 'Scissors';
 		}
 
-		// CALL PC DECISION
+		// Call pc decision
 		computerDecision();
 	});
 });
