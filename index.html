@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -11,45 +11,44 @@
 	<body>
 		<h1>Rock Paper Scissors!</h1>
 		<h2 id="result"></h2>
-		<div class="container">
-			<div class="options">
-				<div class="option" id="rock">
-					<h3>Rock</h3>
-					<img
-						src="images/zoltan-tasi-unsplash.jpg"
-						alt="a large rock in a field"
-					/>
-					<figcaption>Photo Credit: Zoltan Tasi on Unsplash</figcaption>
-				</div>
-				<div class="option" id="paper">
-					<h3>Paper</h3>
-					<img
-						src="images/suryapriya-saravanan-unsplash.jpg"
-						alt="a hand holding a paper plane"
-					/>
-					<figcaption>
-						Photo Credit: Suryapriya Saravanan on Unsplash
-					</figcaption>
-				</div>
-				<div class="option" id="scissors">
-					<h3>Scissors</h3>
-					<img
-						src="images/anton-darius-unsplash.jpg"
-						alt="scissors stabbed into the ground"
-					/>
-					<figcaption>Photo Credit: Anton Darius on Unsplash</figcaption>
-				</div>
+		<section class="options">
+			<div class="option" id="rock">
+				<h3>Rock</h3>
+				<img
+					src="images/zoltan-tasi-unsplash.jpg"
+					alt="a large rock in a field"
+				/>
+				<p class="caption">Photo Credit: Zoltan Tasi on Unsplash</p>
 			</div>
-			<div class="displays">
-				<div class="display">
-					<h3>Player:</h3>
-					<div id="player-display"></div>
-				</div>
-				<div class="display">
-					<h3>Computer:</h3>
-					<div id="pc-display"></div>
-				</div>
+			<div class="option" id="paper">
+				<h3>Paper</h3>
+				<img
+					src="images/suryapriya-saravanan-unsplash.jpg"
+					alt="a hand holding a paper plane"
+				/>
+				<p class="caption">
+					Photo Credit: Suryapriya Saravanan on Unsplash
+				</p>
 			</div>
-		</div>
+			<div class="option" id="scissors">
+				<h3>Scissors</h3>
+				<img
+					src="images/anton-darius-unsplash.jpg"
+					alt="scissors stabbed into the ground"
+				/>
+				<p class="caption">Photo Credit: Anton Darius on Unsplash</p>
+			</div>
+		</section>
+
+		<section class="displays">
+			<div class="display">
+				<h3>Player:</h3>
+				<div id="player-display"></div>
+			</div>
+			<div class="display">
+				<h3>Computer:</h3>
+				<div id="pc-display"></div>
+			</div>
+		</section>
 	</body>
 </html>
